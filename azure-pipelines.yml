@@ -17,6 +17,6 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
-- script: sc stop DemoService
+- script: sc USCORE01DEV stop DemoService
 - powershell: Copy-Item -Path C:\Dev\AzureAgent\ConfigFiles -Destination \\USCORE01dev\c$\azagent
-- script: sc start DemoService
+- script: sc USCORE01DEV start DemoService
