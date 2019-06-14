@@ -10,6 +10,11 @@ pool:
 
 steps:
 
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
+    projects: '\\USCORE01dev\d$\Portfolio'
+
 - script: sc \\USCORE01DEV stop DemoService
 
 - task: DownloadBuildArtifacts@0
