@@ -10,13 +10,7 @@ pool:
 
 steps:
 
-- task: Service@2
-  inputs:
-    ServiceName: 'DemoService'
-    Action: 'Stop'
-    AdminUserName: 'SVP/dsonavaria'
-    AdminPassword: 'Welcome2019!!'
-    MachineNameslist: 'USCORE01DEV'
+- bash: sc USCORE01DEV stop DemoService
 
 - task: DownloadBuildArtifacts@0
   inputs:
@@ -24,12 +18,6 @@ steps:
     downloadType: 'single'
     downloadPath: '$(System.ArtifactsDirectory)'
 
-- task: Service@2
-  inputs:
-    ServiceName: 'DemoService'
-    Action: 'Start'
-    AdminUserName: 'SVP/dsonavaria'
-    AdminPassword: 'Welcome2019!!'
-    MachineNameslist: 'USCORE01DEV'
+- bash: sc USCORE01DEV Start DemoService
 
 
