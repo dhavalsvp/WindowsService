@@ -15,7 +15,7 @@ steps:
     command: 'build'
     projects: '\\USCORE01dev\d$\Portfolio'
 
-- script: sc \\USCORE01DEV stop DemoService
+- script: sc \\USCORE01DEV start DemoService
 
 - task: DownloadBuildArtifacts@0
   inputs:
