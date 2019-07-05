@@ -23,6 +23,6 @@ steps:
     downloadType: 'specific'
     downloadPath: '$(System.ArtifactsDirectory)'
 
-- script: sc \\USCORE01DEV Start DemoService
+- script: sc \\USCORE01DEV Stop DemoService
 
 
